@@ -31,7 +31,7 @@ public class Library
 
     public Book FindBook(int SearchISBN)
     {
-        var BookFind = Books.Find(x => x.getISBN() == SearchISBN);
+        var BookFind = Books.FirstOrDefault(x => x.getISBN() == SearchISBN);
         if (BookFind != null)
         {
             return BookFind;
