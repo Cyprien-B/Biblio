@@ -28,16 +28,12 @@ while (true)
 
     string choixUtilisateur = Console.ReadLine();
 
-    if (choixUtilisateur.Length < 1)
+    switch (choixUtilisateur)
     {
-        Console.Clear();
-    }
-    else
-    {
-
-        // 1 Ajouter un livre
-        if (choixUtilisateur == "1")
-        {
+        default:
+            Console.Clear();
+            break;
+        case "1":
             Console.WriteLine("Quelle est le nom du livre ?");
             string NameLivre = Console.ReadLine();
             Console.WriteLine("Quel est le nom de l'auteur ");
@@ -51,70 +47,50 @@ while (true)
                 var Livre = new Book(ISBNLivre, NameLivre, AutheurLivre, publichdateLivre);
                 SeccionLibrary.AddBookToLibrary(Livre);
 
-                foreach (Book book in SeccionLibrary.GetBooks())
-                {
-                    if (book.available)
-                    {
-                        Console.WriteLine(book.GetTitle());
-                    }
 
-                }
             }
             else
             {
                 Console.WriteLine("Vous n'avez pas remplit tout les champs");
             }
-
-        }
-
-        // 2 Lister les livres
-        if (choixUtilisateur == "2")
-        {
-
+            break;
+        case "2":
             Console.WriteLine("Les livres disponibles sont les suivants : ");
             foreach (Book book in SeccionLibrary.GetBooks())
             {
                 if (book.available)
                 {
-                    Console.WriteLine(book.GetTitle());
+                    Console.WriteLine($" {book.GetTitle()} {book.getISBN}");
                 }
 
             }
             Console.WriteLine("");
+            break;
+        case "3":
+            Console.WriteLine("Inndiquer un ISBN : ");
+            int ISBNToDelete = Convert.ToInt32(Console.ReadLine());
+            if (ISBNToDelete != null)
+            {
+                Book BookToDelete = SeccionLibrary.FindBook(ISBNToDelete);
+                SeccionLibrary.Remove(BookToDelete);
+            }
+            break;
+        case "4":
+            foreach (User user in SeccionUsers)
+            {
 
-        }
-
-        //"3 Supprimer un livres
-        if (choixUtilisateur == "3")
-        {
-
-        }
-
-        //4 Lister les utilisateurs
-        if (choixUtilisateur == "4")
-        {
-
-        }
-
-        //5 Creer un utilisateur
-        if (choixUtilisateur == "5")
-        {
-
-        }
-
-        //6 Selectionner un utilisateur
-        if (choixUtilisateur == "6")
-        {
-
-        }
-
-        //7 Emprunter un livre
-        if (choixUtilisateur == "7")
-        {
-
-        }
+                Console.WriteLine(user.GetName());
 
 
+            }
+            break;
+        case "5":
+
+            break;
+        case "6":
+            break;
+        case "7":
+            break;
 
     }
 }

@@ -12,3 +12,4 @@ C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\
 C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.pdb
 C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.genruntimeconfig.cache
 C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\ref\Biblio.dll
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.sourcelink.json

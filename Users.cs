@@ -21,4 +21,9 @@ public class User
         Books.Add(book);
 
     }
+
+    public string GetName()
+    {
+        return this.Name ;
+    }
 }
