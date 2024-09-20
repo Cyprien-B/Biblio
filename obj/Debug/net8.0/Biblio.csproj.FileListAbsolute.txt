@@ -1,0 +1,14 @@
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\bin\Debug\net8.0\Biblio.exe
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\bin\Debug\net8.0\Biblio.deps.json
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\bin\Debug\net8.0\Biblio.runtimeconfig.json
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\bin\Debug\net8.0\Biblio.dll
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\bin\Debug\net8.0\Biblio.pdb
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.AssemblyInfoInputs.cache
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.AssemblyInfo.cs
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.csproj.CoreCompileInputs.cache
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.dll
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\refint\Biblio.dll
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.pdb
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\Biblio.genruntimeconfig.cache
+C:\Users\cypri\Desktop\Developpeur\Code\C#\Initiation Poo Console\Biblio\Biblio\obj\Debug\net8.0\ref\Biblio.dll
