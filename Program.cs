@@ -18,11 +18,13 @@ SeccionUsers.Add(user1);
 Console.WriteLine("Choix :");
 Console.WriteLine("1 Ajouter un livre");
 Console.WriteLine("2 Lister les livres");
-Console.WriteLine("3 Supprimer un livres");
+Console.WriteLine("3 Supprimer un livre");
 Console.WriteLine("4 Lister les utilisateurs");
-Console.WriteLine("5 Creer un utilisateur");
+Console.WriteLine("5 Créer un utilisateur");
 Console.WriteLine("6 Supprimer un utilisateur");
 Console.WriteLine("7 Emprunter un livre");
+Console.WriteLine("8 Lister les livres empruntés");
+
 
 while (true)
 {
@@ -37,12 +39,16 @@ while (true)
             Console.WriteLine("Choix :");
             Console.WriteLine("1 Ajouter un livre");
             Console.WriteLine("2 Lister les livres");
-            Console.WriteLine("3 Supprimer un livres");
+            Console.WriteLine("3 Supprimer un livre");
             Console.WriteLine("4 Lister les utilisateurs");
-            Console.WriteLine("5 Creer un utilisateur");
+            Console.WriteLine("5 Créer un utilisateur");
             Console.WriteLine("6 Supprimer un utilisateur");
             Console.WriteLine("7 Emprunter un livre");
+            Console.WriteLine("8 Lister les livres empruntés");
+
             break;
+
+            //Ajouter un livre
         case "1":
             Console.WriteLine("Quelle est le nom du livre ?");
             string NameLivre = Console.ReadLine();
@@ -64,6 +70,8 @@ while (true)
                 Console.WriteLine("Vous n'avez pas remplit tout les champs");
             }
             break;
+
+            //Lister les livres dispo
         case "2":
             Console.WriteLine("Les livres disponibles sont les suivants : ");
             foreach (Book book in SeccionLibrary.GetBooks())
@@ -76,8 +84,10 @@ while (true)
             }
             Console.WriteLine("");
             break;
+
+            //Supprimer un livre
         case "3":
-            Console.WriteLine("Inndiquer un ISBN : ");
+            Console.WriteLine("Indiquer un ISBN : ");
             int ISBNToDelete = Convert.ToInt32(Console.ReadLine());
             if (ISBNToDelete != null)
             {
@@ -86,6 +96,8 @@ while (true)
                 Console.WriteLine("livre Supprimer");
             }
             break;
+
+            //Lister les utilisateurs
         case "4":
             Console.WriteLine("Les utilisateur sont les suivants : ");
             foreach (User user in SeccionUsers)
@@ -94,6 +106,8 @@ while (true)
 
             }
             break;
+
+            //Ajouter un utilisateur
         case "5":
             Console.WriteLine("Quelle est le nom de L'utilisateur");
             string nomUtilisateur = Console.ReadLine();
@@ -111,6 +125,8 @@ while (true)
             }
 
             break;
+
+            //Supprimer un utilisateur
         case "6":
             Console.WriteLine("Donner le nom de l'utilisateur a supprimer");
             string nameUserToDelete = Console.ReadLine();
@@ -124,8 +140,42 @@ while (true)
             }
             Console.WriteLine("Pas d'utilisateur trouver avec ce nom");
             break;
-        case "7":
 
+            //Emprunt de livre
+        case "7":
+            Console.WriteLine("Donner le nom de la personne qui emprunte le livre");
+            string nameUserWhoBorrow = Console.ReadLine();
+            User UserWhoBorrow = SeccionUsers.Find(x => x.GetName() == nameUserWhoBorrow);
+            if (UserWhoBorrow != null)
+            {
+                int nbrLivre = UserWhoBorrow.Books.Count();
+                if(nbrLivre > 2 && !UserWhoBorrow.IsPremium || nbrLivre > 4)
+                {
+                    Console.WriteLine("Vous avez atteint le nombre limite de livre");
+                    break ;
+                }
+                Console.WriteLine("Indiquer un ISBN : ");
+                int ISBNToBorrow = Convert.ToInt32(Console.ReadLine());
+                if (ISBNToBorrow != null)
+                {
+                    Book bookToBorrow = SeccionLibrary.FindBook(ISBNToBorrow);
+                    bookToBorrow.available = false;
+                    UserWhoBorrow.addBook(bookToBorrow);
+                    Console.WriteLine("Livre emprunter");
+                    break;
+                }
+            }
+            Console.WriteLine("L'utilisateur ou le livre n'existe pas");
+            break;
+        case "8":
+            foreach (Book book in SeccionLibrary.GetBooks())
+            {
+                if (!book.available)
+                {
+                    Console.WriteLine($" {book.GetTitle()} {book.getISBN()}");
+                }
+
+            }
             break;
 
     }

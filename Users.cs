@@ -8,7 +8,9 @@ public class User
 {
     private string Name { get; set; }
     private string Surname { get; set; }
-    private List<Book> Books { get; set; } = new List<Book>();
+
+    public bool IsPremium { get; set; } = true;
+    public List<Book> Books { get; set; } = new List<Book>();
 
     public User(string Name,String Surname)
     {
